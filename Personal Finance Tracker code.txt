@@ -1,0 +1,240 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./journal.html">Journal</a></li>
+                <li><a href="./journal.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <h2>Welcome to your Dashboard!</h2>
+    </div>
+</body>
+</html>
+
+
+
+journal.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Journal - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./journal.html">Journal</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <h2>Journal Entries</h2>
+
+        <div class="journal-entries">
+            <!-- Journal entries will be populated here -->
+            <div class="journal-entry">
+                <h3>Date - Entry Title</h3>
+                <p>Journal entry content...</p>
+            </div>
+            <!-- Add more entries as needed -->
+        </div>
+
+        <div class="journal-form">
+            <h2>Add New Journal Entry</h2>
+            <form id="journal-form">
+                <label for="entry-date">Date:</label>
+                <input type="date" id="entry-date" required>
+
+                <label for="entry-title">Title:</label>
+                <input type="text" id="entry-title" required>
+
+                <label for="entry-content">Content:</label>
+                <textarea id="entry-content" rows="4" required></textarea>
+
+                <button type="submit">Add Entry</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+settings.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Dashboard</a></li>
+                <li><a href="./journal.html">Journal</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <div class="settings-section">
+            <h2>Account Details</h2>
+            <form id="account-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <div class="settings-section">
+            <h2>Notification Settings</h2>
+            <div class="notification-options">
+                <label>
+                    <input type="checkbox" id="emailNotifications" name="emailNotifications">
+                    Receive Email Notifications
+                </label>
+                <label>
+                    <input type="checkbox" id="smsNotifications" name="smsNotifications">
+                    Receive SMS Notifications
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Theme Customization</h2>
+            <div class="theme-options">
+                <label for="theme">Select Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light Theme</option>
+                    <option value="dark">Dark Theme</option>
+                    <option value="pink">Pink Theme</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+style.css
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9e8e2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #d15a5a;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d15a5a;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #d15a5a;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #d15a5a;
+    color: #ffffff;
+}
+
+.journal-entries {
+    margin-bottom: 30px;
+}
+
+.journal-entry {
+    border: 2px solid #f3c8c2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #fef0ec;
+}
+
+.journal-form {
+    padding: 30px;
+    border: 2px solid #f3c8c2;
+    border-radius: 20px;
+    background-color: #fef0ec;
+}
+
+.journal-form label,
+.journal-form textarea,
+.journal-form input[type="date"],
+.journal-form input[type="text"] {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #d15a5a;
+    font-size: 16px;
+}
+
+.journal-form button {
+    padding: 12px 25px;
+    background-color: #d15a5a;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.journal-form button:hover {
+    background-color: #c14949;
+}
+
+
